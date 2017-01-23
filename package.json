@@ -1,0 +1,30 @@
+{
+  "name": "hrsf52-mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunniemao/hrsf52-mvp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunniemao/hrsf52-mvp/issues"
+  },
+  "homepage": "https://github.com/sunniemao/hrsf52-mvp#readme",
+  "dependencies": {
+    "browserify": "^13.3.0",
+    "express": "^4.14.0",
+    "guid": "0.0.12",
+    "gulp": "^3.9.1",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

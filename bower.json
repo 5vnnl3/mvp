@@ -1,0 +1,20 @@
+{
+  "name": "hrsf52-mvp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sunnie Mao <mao.sunnie@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sunniemao/hrsf52-mvp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css": "^3.3.6"
+  }
+}
