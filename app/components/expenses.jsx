@@ -1,12 +1,13 @@
 var React = require("react");
-var ExpenseEntry = require("./expenseEntry.jsx")
+var ExpenseEntry = require("./expenseEntry.jsx");
+var AddExpenseEntry= require("./AddExpenseEntry.jsx");
 
 module.exports = React.createClass({
    render: function() {
        return(
            <div className="row">
                 <div className="col-md-6">
-                    //We will add add expense functionality here
+                  <AddExpenseEntry />
                 </div>
                 <div className="col-md-6">
                     {
