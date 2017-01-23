@@ -17,14 +17,19 @@
   },
   "homepage": "https://github.com/sunniemao/hrsf52-mvp#readme",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "browserify": "^13.3.0",
+    "es6": "0.0.7",
     "express": "^4.14.0",
     "guid": "0.0.12",
     "gulp": "^3.9.1",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.7.7",
     "path": "^0.12.7",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "reactify": "^1.1.1",
+    "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0"
   }
 }

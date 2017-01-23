@@ -1,3 +1,6 @@
 .navbar {
   /*background-color: #0EBFE9;*/
 }
+.delete-button{
+    cursor: pointer;
+}

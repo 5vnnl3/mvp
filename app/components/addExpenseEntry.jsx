@@ -2,15 +2,16 @@ var React = require("react");
 var actions = require("../actions/expenseAction");
 
 module.exports = React.createClass({
-    getInitialState:function(){
+    getInitialState: function() {
       return {
-          name:"",
-          amount:""
+          name: "",
+          amount: ""
       }  
     },
     addExpense:function(e){
         e.preventDefault();
         actions.addExpense(this.state);
+        console.log('add');
     },
     handleInputChange:function(e){
       e.preventDefault();

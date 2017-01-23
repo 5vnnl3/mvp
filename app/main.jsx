@@ -1,14 +1,15 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
 var Expenses = require("./components/expenses.jsx");
-var trips = require("./stores/trips");
-var _expenses = trips.getExpenses();
-trips.onChange(function(expenses) {
+var expenseStorage = require("./stores/expenseStorage");
+var _expenses = [];
+var getExpensesCB = function(expenses){
     _expenses = expenses;
     render();
-});
-              
+};
+expenseStorage.onChange(getExpensesCB);
+
 function render(){
-    ReactDOM.render(<Expenses expenses={_expenses} />, document.getElementById("container"));    
+    ReactDOM.render(<Expenses expenses={_expenses} />, document.getElementById("container"));  
+    console.log('rendered!');
 }
-render();
