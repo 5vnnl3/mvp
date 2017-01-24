@@ -6,10 +6,11 @@ module.exports = React.createClass({
    render: function() {
        return(
            <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-12">
                   <AddExpenseEntry />
                 </div>
-                <div className="col-md-6">
+                <div className="row">
+                <div className="col-md-12">
                     {
                         this.props.expenses.map(function(expense, index){
                             return(
@@ -18,6 +19,7 @@ module.exports = React.createClass({
                         })
                     }
                 </div>
+           </div>
            </div>
        )
    } 

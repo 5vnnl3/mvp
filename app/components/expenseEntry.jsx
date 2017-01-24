@@ -5,7 +5,6 @@ module.exports = React.createClass({
     deleteExpense: function(e){
         e.preventDefault();
         actions.deleteExpense(this.props.entry);
-        console.log('delete');
     },
     render: function() {
         return(

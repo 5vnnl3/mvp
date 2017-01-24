@@ -13,7 +13,6 @@ module.exports = React.createClass({
     addExpense:function(e){
         e.preventDefault();
         actions.addExpense(this.state);
-        console.log('add');
     },
     handleInputChange: function(e){
       e.preventDefault();
@@ -33,7 +32,7 @@ module.exports = React.createClass({
             <form className="form" onSubmit={this.addExpense}>
                 <div className="form-group">
                     <label className="control-label" htmlFor="trip">Trip Name:</label>
-                    <input type="text" className="form-control" id="trip" name="trip" value={this.state.trip} onChange={this.handleInputChange} placeholder="i.e. NYE 2018 in NYC, Eurotrip June 2018, etc." />                    
+                    <input type="text" className="form-control" id="trip" name="trip" value={this.state.trip} onChange={this.handleInputChange} placeholder="Select existing trip or type a new name to create" />                    
                 </div>
                 <div className="form-group">
                     <label className="control-label" htmlFor="name">Expense Description:</label>
