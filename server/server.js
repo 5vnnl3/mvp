@@ -9,9 +9,9 @@ var app = express();
 app.use(express.static(path.join(__dirname,"../app/dist")));
 app.use(bodyParser.json())
 app.use("/api", expenseController);
-app.listen(8000,function(){
-    console.log("Started listening on port", 8000);
+app.listen(4568,function(){
+    console.log("Started listening on port", 4568);
 });
 
 // Connect to mongodb database
-mongoose.connect("mongodb://localhost/expensedb");
+mongoose.connect("mongodb://localhost/jetsetterDB");

@@ -9,7 +9,7 @@ var getExpensesCB = function(expenses){
 };
 expenseStorage.onChange(getExpensesCB);
 
-function render(){
+function render() {
     ReactDOM.render(<Expenses expenses={_expenses} />, document.getElementById("container"));  
     console.log('rendered!');
 }

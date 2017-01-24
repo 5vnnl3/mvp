@@ -1,7 +1,7 @@
 var dispatcher = require("../dispatcher");
 var expenseService = require("../services/expenseService");
 
-function expenseStorage() {
+function ExpenseStorage() {
     var listeners = [];
 
     function onChange(listener) {
@@ -56,4 +56,4 @@ function expenseStorage() {
     }
 }
 
-module.exports = expenseStorage();
+module.exports = ExpenseStorage();

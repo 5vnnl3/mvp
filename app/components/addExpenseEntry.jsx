@@ -13,14 +13,14 @@ module.exports = React.createClass({
         actions.addExpense(this.state);
         console.log('add');
     },
-    handleInputChange:function(e){
+    handleInputChange: function(e){
       e.preventDefault();
       var name = e.target.name;
       var state = this.state;
       state[name] = e.target.value;
       this.setState(state);
     },
-    render:function(){
+    render: function() {
         return(
             <form className="form" onSubmit={this.addExpense}>
                 <div className="form-group">
@@ -28,8 +28,8 @@ module.exports = React.createClass({
                     <input type="text" className="form-control" id="name" name="name" value={this.state.name} onChange={this.handleInputChange} placeholder="i.e. airfaire, hotel, meal, entertainment, gift, etc." />                    
                 </div>
                 <div className="form-group">
-                    <label className="control-label" htmlFor="amount">Amount</label>
-                    <input type="text" className="form-control" id="tagline" name="amount" value={this.state.address} onChange={this.handleInputChange} placeholder="$USD" />                    
+                    <label className="control-label" htmlFor="amount">Amount:</label>
+                    <input type="text" className="form-control" id="amount" name="amount" value={this.state.amount} onChange={this.handleInputChange} placeholder="$USD" />                    
                 </div>
                 <div className="form-group">
                     <button className="btn" type="submit">Add Expense</button>

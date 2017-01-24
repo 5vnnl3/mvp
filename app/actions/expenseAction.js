@@ -1,16 +1,16 @@
 var dispatcher = require("../dispatcher");
 
 module.exports = {
-    addExpense:function(expense){
+    addExpense: function(expense) {
         dispatcher.dispatch({
            expense: expense,
-           type:"expense: addExpense" 
+           type:"expense:addExpense" 
         });
     },
-    deleteExpense:function(expense){
+    deleteExpense: function(expense) {
         dispatcher.dispatch({
            expense: expense,
-           type:"expense: deleteExpense" 
+           type:"expense:deleteExpense" 
         });
     }
 }

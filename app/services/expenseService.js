@@ -1,13 +1,13 @@
 var $ = require("jquery");
 var promise = require("es6-promise");
-// var resourceUrl = "http://localhost:8000/api/expenses";
+var resourceUrl = "/api/expenses";
 
 module.exports = {
     getExpenses: function () {
         var Promise = promise.Promise;
         return new Promise(function (resolve, reject) {
             $.ajax({
-                url: 'api/expenses',
+                url: resourceUrl,
                 method: "GET",
                 dataType: "json",
                 success: resolve,
@@ -19,7 +19,7 @@ module.exports = {
         var Promise = promise.Promise;
         return new Promise(function (resolve, reject) {
             $.ajax({
-                url: 'api/expenses',
+                url: resourceUrl,
                 data: JSON.stringify(expense),
                 method: "POST",
                 dataType: "json",
@@ -33,7 +33,7 @@ module.exports = {
         var Promise = promise.Promise;
         return new Promise(function (resolve, reject) {
             $.ajax({
-                url: 'api/expenses' + "/" + expense._id,
+                url: resourceUrl + "/" + expense._id,
                 method: "DELETE",
                 dataType: "json",
                 success: resolve,
