@@ -11,11 +11,11 @@ module.exports = React.createClass({
         return(
             <div className="panel panel-default">
                 <div className="panel-heading">
-                    {this.props.entry.name}
+                    {this.props.entry.trip} - {this.props.entry.name} 
                     <span className="pull-right text-uppercase delete-button" onClick={this.deleteExpense}>&times;</span>
                 </div>
                 <div className="panel-body">
-                    {this.props.entry.amount}
+                    ${this.props.entry.amount} on {this.props.entry.date} 
                 </div>
             </div>
         )

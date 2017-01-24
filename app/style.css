@@ -1,6 +1,16 @@
-.navbar {
-  /*background-color: #0EBFE9;*/
+.navbar img {
+  height: 20px;
 }
 .delete-button{
     cursor: pointer;
+}
+body {
+/*  background-image: url("http://www.earthuncovered.com/wp-content/uploads/2014/06/Travel-money-foreign-exchange-money-abroad.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom-center;
+  background-size: cover;
+  filter: alpha(opacity=50);
+  border-left: 100px solid #D3D3D3;
+  border-right: 100px solid #D3D3D3;
+  margin: 0px;*/
 }
