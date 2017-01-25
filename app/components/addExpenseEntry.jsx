@@ -20,10 +20,6 @@ module.exports = React.createClass({
       var state = this.state;
       state[name] = e.target.value;
       this.setState(state);
-      if (name === 'trip') {
-        this.props.handleTripInputChange(e.target.value);
-        console.log(e.target.value);
-      }
     },
     numbersOnly: function(e){
       const re = /[0-9A-F:]+/g;

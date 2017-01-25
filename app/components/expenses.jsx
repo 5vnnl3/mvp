@@ -3,28 +3,11 @@ var ExpenseEntry = require("./expenseEntry.jsx");
 var AddExpenseEntry= require("./AddExpenseEntry.jsx");
 
 module.exports = React.createClass({
-    // getInitialState: function() {
-    //   var amounts = this.props.expenses.map((accum) => {return accum['amount'];});
-    //   var totalInit = amounts.length > 1 ? amounts.reduce((accum, curr) => {return accum + curr;}) : amounts[0];
-    //   return {
-    //       expenses: this.props.expenses, 
-    //       total: totalInit
-    //   }  
-    // },
-  //   filterExpenses: function(query) {
-  //     var filtered = this.props.expenses.filter((expense) => {return expense.trip.indexOf(query) > -1;});
-  //     var newTotal = filtered.length > 1 ? filtered.reduce((accum, curr) => {return accum.amount + curr.amount;}) : filtered[0].amount;
-  //     if (query === '') {newTotal = 1234;}
-  //     var state = this.state;
-  //     state['expenses'] = filtered;
-  //     state['total'] = newTotal;
-  //     this.setState(state);
-  // },
    render: function() {
        return(
            <div className="row">
                 <div className="col-md-12">
-                  <AddExpenseEntry handleTripInputChange={this.filterExpenses} />
+                  <AddExpenseEntry />
                   <br />
                 </div>
                 <div className="row tblwidth">
@@ -48,12 +31,12 @@ module.exports = React.createClass({
                           })
                       } 
                     </tbody>
-                    <tfoot>
+                     <tfoot>
                       <tr>
                         <th> </th>
                         <th> </th>
                         <th></th>
-                        <th className="total">Total: ${this.state.total}</th>
+                        <th className="total">Total: &nbsp; ${this.props.total}</th>
                         <th> </th>
                       </tr>
                     </tfoot>
