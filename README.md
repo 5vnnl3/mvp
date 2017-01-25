@@ -10,9 +10,6 @@ From within the root directory:
 sudo npm install -g bower
 npm install
 bower install
-
-bower install
-npm install
 gulp
 mongod
 nodemon ./server/server.js
