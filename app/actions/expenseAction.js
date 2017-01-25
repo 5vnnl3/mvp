@@ -12,5 +12,5 @@ module.exports = {
            expense: expense,
            type:"expense:deleteExpense" 
         });
-    }
+    },
 }

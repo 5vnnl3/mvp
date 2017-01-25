@@ -20,6 +20,10 @@ module.exports = React.createClass({
       var state = this.state;
       state[name] = e.target.value;
       this.setState(state);
+      if (name === 'trip') {
+        this.props.handleTripInputChange(e.target.value);
+        console.log(e.target.value);
+      }
     },
     numbersOnly: function(e){
       const re = /[0-9A-F:]+/g;
@@ -31,20 +35,20 @@ module.exports = React.createClass({
         return(
             <form className="form" onSubmit={this.addExpense}>
                 <div className="form-group">
-                    <label className="control-label" htmlFor="trip">Trip Name:</label>
-                    <input type="text" className="form-control" id="trip" name="trip" value={this.state.trip} onChange={this.handleInputChange} placeholder="Select existing trip or type a new name to create" />                    
+                    <label className="control-label" htmlFor="trip">Trip Name (keywords will filter results below):</label>
+                    <input type="text" className="form-control" id="trip" name="trip" value={this.state.trip} onChange={this.handleInputChange} placeholder="i.e. NYE in NYC, Eurotrip 2018, etc." required />                    
                 </div>
                 <div className="form-group">
                     <label className="control-label" htmlFor="name">Expense Description:</label>
-                    <input type="text" className="form-control" id="name" name="name" value={this.state.name} onChange={this.handleInputChange} placeholder="i.e. flight to Rome, dinner at French Laundry split with Amy, etc." />                    
-                </div>
-                <div className="form-group">
-                    <label className="control-label" htmlFor="amount">Amount ($USD):</label>
-                    <input type="text" className="form-control" id="amount" name="amount" value={this.state.amount} onChange={this.handleInputChange} onKeyPress={(e) => this.numbersOnly(e)} placeholder="Numbers only!" />                    
+                    <input type="text" className="form-control" id="name" name="name" value={this.state.name} onChange={this.handleInputChange} placeholder="i.e. flight to Rome, dinner at French Laundry split with Amy, etc." required />                    
                 </div>
                 <div className="form-group">
                     <label className="control-label" htmlFor="date">Date:</label>
-                    <input type="text" className="form-control" id="date" name="date" value={this.state.date} onChange={this.handleInputChange} />                    
+                    <input type="text" className="form-control" id="date" name="date" value={this.state.date} onChange={this.handleInputChange} required />                    
+                </div>
+                <div className="form-group">
+                    <label className="control-label" htmlFor="amount">Amount ($USD):</label>
+                    <input type="text" className="form-control" id="amount" name="amount" value={this.state.amount} onChange={this.handleInputChange} onKeyPress={(e) => this.numbersOnly(e)} placeholder="Numbers only!" required/>                    
                 </div>
                 <div className="form-group">
                     <button className="btn" type="submit">Add Expense</button>
@@ -53,14 +57,3 @@ module.exports = React.createClass({
         )
     }
 })
-
-  //               <div class="form-group">
-  //   <label for="exampleSelect1">Select existing trip: </label>
-  //   <select class="form-control" id="exampleSelect1">
-  //     <option>1</option>
-  //     <option>2</option>
-  //     <option>3</option>
-  //     <option>4</option>
-  //     <option>Create new trip</option>
-  //   </select>
-  // </div>

@@ -8,15 +8,15 @@ module.exports = React.createClass({
     },
     render: function() {
         return(
-            <div className="panel panel-default">
-                <div className="panel-heading">
-                    {this.props.entry.trip} - {this.props.entry.name} 
-                    <span className="pull-right text-uppercase delete-button" onClick={this.deleteExpense}>&times;</span>
-                </div>
-                <div className="panel-body">
-                    ${this.props.entry.amount} on {this.props.entry.date} 
-                </div>
-            </div>
+
+          <tr>
+            <td>{this.props.entry.trip}</td>
+            <td>{this.props.entry.name} </td>
+            <td className="tright">{this.props.entry.date} </td>
+            <td className="total">${this.props.entry.amount}</td>
+            <td className="tcenter"><span className="text-uppercase delete-button" onClick={this.deleteExpense}>Delete</span></td>
+          </tr>
+
         )
     }
 })
