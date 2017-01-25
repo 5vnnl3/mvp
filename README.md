@@ -3,11 +3,10 @@ This is a solo project I completed from scratch as a student at [hackreactor](ht
 
 
 
-### Installing Dependencies
+### Dependencies
 
 From within the root directory:
 ```sh
-sudo npm install -g bower
 npm install
 bower install
 gulp
