@@ -7,7 +7,7 @@ module.exports = React.createClass({
        return(
            <div className="row">
                 <div className="col-md-12">
-                  <AddExpenseEntry />
+                  <AddExpenseEntry handleTripInputChange={this.props.handleTripInputChange} />
                   <br />
                 </div>
                 <div className="row tblwidth">
