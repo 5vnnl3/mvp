@@ -11,9 +11,15 @@ var getExpensesCB = function(expenses){
     render();
 };
 var filterExpenses = function(query) {
-  var filtered = _expenses.filter((expense) => {return expense.trip.indexOf(query) > -1;});
-  _expenses = filtered;
-  render();
+  if (query === '') {
+    expenseStorage.onChange(getExpensesCB);
+  } else {
+    var filtered = _expenses.filter((expense) => {return expense.trip.indexOf(query) > -1;});
+    _expenses = filtered;
+      var amounts = _expenses.map((accum) => {return accum['amount'];});
+    _total = amounts.reduce((accum, curr) => {return accum+ curr;});
+    render();
+  }
 };
 
 expenseStorage.onChange(getExpensesCB);
