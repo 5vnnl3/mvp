@@ -46,7 +46,15 @@ module.exports = React.createClass({
                     <input type="text" className="form-control" id="date" name="date" value={this.state.date} onChange={this.handleInputChange} required />                    
                 </div>
                 <div className="form-group">
-                    <label className="control-label" htmlFor="amount">Amount ($USD):</label>
+                    <label className="control-label" htmlFor="amount">Amount (foreign currencies will be converted to $USD):  &nbsp;</label>     
+                    <select class="form-control" id="exampleSelect1">
+                    <option>$USD</option>
+                    <option>€EUR</option>
+                    <option>¥JPY</option>
+                    <option>£GBP</option>
+                    <option>₹INR</option>
+                    <option>...</option>
+                  </select>
                     <input type="text" className="form-control" id="amount" name="amount" value={this.state.amount} onChange={this.handleInputChange} onKeyPress={(e) => this.numbersOnly(e)} placeholder="Numbers only!" required/>                    
                 </div>
                 <div className="form-group">
