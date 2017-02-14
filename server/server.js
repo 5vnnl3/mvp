@@ -14,4 +14,4 @@ app.listen(4568,function(){
 });
 
 // Connect to mongodb database
-mongoose.connect("mongodb://localhost/jetsetterDB");
+mongoose.connect("mongodb://jetsetter:jetsetter@ds145379.mlab.com:45379/jetsetter");
